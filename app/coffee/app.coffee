@@ -525,6 +525,15 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
             controller: "LoginPage",
         }
     )
+    $routeProvider.when("/logout",
+        {
+            template: "<span>Logout</span>",
+            title: "COMMON.LOGOUT",
+            description: "COMMON.LOGOUT",
+            disableHeader: true,
+            controller: "LogoutPage",
+        }
+    )
     if window.taigaConfig.publicRegisterEnabled
         $routeProvider.when("/register",
             {
