@@ -1,7 +1,7 @@
 taiga = @.taiga
 debounce = @.taiga.debounce
 
-module = angular.module("taigaAuth", ["taigaResources"])
+module = angular.module("taigaAuth")
 
 class LogoutPage
     @.$inject = [
@@ -10,5 +10,6 @@ class LogoutPage
 
     constructor: ($tgAuth) ->
         $tgAuth.logout()
+
 
 module.controller('LogoutPage', LogoutPage)
